@@ -1,0 +1,38 @@
+{
+    "asset": "8dc20c2a1d62edf418d8f1db8155a230",
+    "fileName": "019e1cd3-574e-7a74-88c7-99f994b4ea9c.jpg",
+    "prompt": "A cute, vibrant game UI frame for displaying the 'next fruit' preview. It should be a rounded square or circle frame with a glossy finish, colorful (matching pink/red fruit tones), in a casual cartoon style with glowing effects and sparkles. Transparent background.",
+    "negativePrompt": "",
+    "model": "game-ui-essentials-2",
+    "modelName": "Game UI Essentials 2.0",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "b2f03f53e54c6e541aa3df80955883cf",
+                "unlabeledIndex": -1
+            }
+        ]
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 2048,
+        "height": 2048
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

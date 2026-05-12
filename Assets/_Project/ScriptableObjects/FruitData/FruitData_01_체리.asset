@@ -17,6 +17,6 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: b2f03f53e54c6e541aa3df80955883cf, type: 3}
   prefab: {fileID: 2757941985751772894, guid: 97c9f30afbd74554c9ab6ed00744d6db, type: 3}
   radius: 0.3
-  visualRadius: 0.432
+  visualRadius: 0.4
   score: 0
   mass: 0.3

@@ -2,6 +2,7 @@ using System.Collections;
 using SuikaGame.Core;
 using SuikaGame.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SuikaGame.Gameplay
 {
@@ -24,7 +25,7 @@ namespace SuikaGame.Gameplay
         private SpriteRenderer currentFruitRenderer; // 드로퍼에 붙은 현재 과일 표시
 
         [SerializeField]
-        private SpriteRenderer nextFruitRenderer; // Next 과일 미리보기
+        private Image nextFruitImage; // NextFruitUIContainer/Frame의 UI Image
 
         private FruitData currentFruit;
         private FruitData nextFruit;
@@ -91,14 +92,10 @@ namespace SuikaGame.Gameplay
                 }
             }
 
-            if (nextFruitRenderer != null)
+            if (nextFruitImage != null)
             {
-                nextFruitRenderer.sprite = nextFruit?.sprite;
-                if (nextFruit != null)
-                {
-                    float d = nextFruit.radius * 2f;
-                    nextFruitRenderer.transform.localScale = new Vector3(d, d, 1f);
-                }
+                nextFruitImage.sprite = nextFruit?.sprite;
+                nextFruitImage.preserveAspect = true;
             }
         }
 

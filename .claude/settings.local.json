@@ -23,7 +23,9 @@
       "mcp__GitHub__merge_pull_request",
       "Bash(git pull *)",
       "Bash(where dotnet-csharpier *)",
-      "Read(//c/Users/zse846/**)"
+      "Read(//c/Users/zse846/**)",
+      "Bash(npm --version)",
+      "Bash(npm list *)"
     ]
   }
 }
