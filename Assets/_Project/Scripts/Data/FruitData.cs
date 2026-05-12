@@ -23,7 +23,7 @@ namespace SuikaGame.Data
         [SerializeField]
         public float mass;
 
-        [SerializeField]
-        public AudioClip mergeSfx;
+        //[SerializeField]
+        //public AudioClip mergeSfx;
     }
 }
