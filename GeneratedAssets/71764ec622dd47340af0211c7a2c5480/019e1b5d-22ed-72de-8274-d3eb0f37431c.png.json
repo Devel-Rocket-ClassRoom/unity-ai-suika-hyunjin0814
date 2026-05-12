@@ -1,0 +1,28 @@
+{
+    "asset": "71764ec622dd47340af0211c7a2c5480",
+    "fileName": "019e1b5d-22ed-72de-8274-d3eb0f37431c.png",
+    "prompt": "A cozy warm living room background for a 2D game, stylized cartoon art, fireplace with soft glow, bookshelves, warm wooden floor, pastel colors, high detail, no characters, soft atmosphere.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}

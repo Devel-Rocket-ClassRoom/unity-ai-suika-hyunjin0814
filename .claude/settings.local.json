@@ -9,7 +9,21 @@
       "Bash(grep -E \"\\\\.\\(cs|csproj|sln\\)$\")",
       "Bash(powershell -Command ' *)",
       "Bash(dotnet tool *)",
-      "mcp__GitHub__issue_write"
+      "mcp__GitHub__issue_write",
+      "Bash(Get-ChildItem -Path \"Assets\\\\_Project\\\\Scripts\" -Recurse -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object FullName)",
+      "mcp__GitHub__list_issues",
+      "mcp__GitHub__create_branch",
+      "Bash(git fetch *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "mcp__GitHub__create_pull_request",
+      "mcp__GitHub__merge_pull_request",
+      "Bash(git pull *)",
+      "Bash(where dotnet-csharpier *)",
+      "Read(//c/Users/zse846/**)"
     ]
   }
 }

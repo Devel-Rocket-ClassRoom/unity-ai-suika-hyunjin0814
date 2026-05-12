@@ -1,0 +1,28 @@
+{
+    "asset": "0c0003e81f08c1a4bbee704b852a2ee9",
+    "fileName": "019e1b35-36fd-79b4-be1f-559ec5d8192d.png",
+    "prompt": "A warm cozy room interior for a mobile game background, soft lighting, pastel colors, 2D stylized cartoon style, high quality, no characters, empty room with soft warm atmosphere.",
+    "negativePrompt": "",
+    "model": "gemini-3.1-flash",
+    "modelName": "Gemini 3.1 Nano Banana 2",
+    "customSeed": -1,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelatePixelGridSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0,
+    "dimensions": {
+        "width": 1024,
+        "height": 1024
+    },
+    "spriteSheet": false,
+    "duration": 0.0
+}
