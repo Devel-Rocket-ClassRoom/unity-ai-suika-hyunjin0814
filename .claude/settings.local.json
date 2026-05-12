@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "mcp__unity-mcp__Unity_GetConsoleLogs",
-      "mcp__unity-mcp__Unity_RunCommand"
+      "mcp__unity-mcp__Unity_RunCommand",
+      "Bash(Get-ChildItem -Force)",
+      "Bash(Select-Object -First 30)",
+      "Bash(Format-List Name, PSIsContainer)",
+      "Bash(grep -E \"\\\\.\\(cs|csproj|sln\\)$\")",
+      "Bash(powershell -Command ' *)",
+      "Bash(dotnet tool *)",
+      "mcp__GitHub__issue_write"
     ]
   }
 }
