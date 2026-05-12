@@ -9,21 +9,19 @@ namespace SuikaGame.UI
         [SerializeField]
         private TextMeshProUGUI scoreText;
 
-        private void OnEnable()
+        private void Start()
         {
+            // Start()는 모든 Awake() 완료 후 호출되므로 싱글턴 안전하게 참조 가능
             if (ScoreManager.Instance != null)
                 ScoreManager.Instance.OnScoreChanged += UpdateScore;
+
+            UpdateScore(ScoreManager.Instance != null ? ScoreManager.Instance.CurrentScore : 0);
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             if (ScoreManager.Instance != null)
                 ScoreManager.Instance.OnScoreChanged -= UpdateScore;
-        }
-
-        private void Start()
-        {
-            UpdateScore(ScoreManager.Instance != null ? ScoreManager.Instance.CurrentScore : 0);
         }
 
         private void UpdateScore(int score)

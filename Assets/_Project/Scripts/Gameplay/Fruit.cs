@@ -88,10 +88,6 @@ namespace SuikaGame.Gameplay
             if (other.Level != Level)
                 return;
 
-            // 수박(11단계)은 FruitManager에서 별도 처리
-            if (Level >= 11)
-                return;
-
             // InstanceID 비교로 한쪽만 머지 실행
             if (GetInstanceID() < other.GetInstanceID())
             {

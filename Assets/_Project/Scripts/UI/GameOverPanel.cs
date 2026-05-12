@@ -18,17 +18,21 @@ namespace SuikaGame.UI
 
         private void Awake()
         {
-            panel.SetActive(false);
-            restartButton.onClick.AddListener(OnRestartClicked);
+            if (panel != null)
+                panel.SetActive(false);
+
+            if (restartButton != null)
+                restartButton.onClick.AddListener(OnRestartClicked);
         }
 
-        private void OnEnable()
+        private void Start()
         {
+            // Start()는 모든 Awake() 완료 후 호출되므로 싱글턴 안전하게 참조 가능
             if (GameManager.Instance != null)
                 GameManager.Instance.OnStateChanged += OnStateChanged;
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             if (GameManager.Instance != null)
                 GameManager.Instance.OnStateChanged -= OnStateChanged;
