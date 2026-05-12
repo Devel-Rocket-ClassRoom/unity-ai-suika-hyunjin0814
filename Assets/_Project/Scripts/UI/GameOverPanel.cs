@@ -47,7 +47,8 @@ namespace SuikaGame.UI
             if (finalScoreText != null)
                 finalScoreText.text = score.ToString("N0");
 
-            panel.SetActive(true);
+            if (panel != null)
+                panel.SetActive(true);
         }
 
         private void OnRestartClicked()
