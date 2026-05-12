@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuikaGame.Data.FruitData
   level: 10
   displayName: "\uBA5C\uB860"
-  sprite: {fileID: 0}
+  sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   radius: 1.85
   score: 55
   mass: 9.5
-  mergeSfx: {fileID: 0}
