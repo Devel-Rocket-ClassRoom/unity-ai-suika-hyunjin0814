@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuikaGame.Data.FruitData
   level: 10
   displayName: "\uBA5C\uB860"
-  sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: d56f684ba8ddb8245a3919577b638aef, type: 3}
+  prefab: {fileID: 713709916986133370, guid: d97f70238c5df6d458932bcb2a182ddd, type: 3}
   radius: 1.85
+  visualRadius: 0.438
   score: 55
   mass: 9.5

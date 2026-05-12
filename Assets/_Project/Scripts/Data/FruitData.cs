@@ -15,7 +15,13 @@ namespace SuikaGame.Data
         public Sprite sprite;
 
         [SerializeField]
+        public GameObject prefab;
+
+        [SerializeField]
         public float radius;
+
+        [SerializeField]
+        public float visualRadius;
 
         [SerializeField]
         public int score;
