@@ -56,13 +56,25 @@ namespace SuikaGame.Gameplay
 
         public Fruit SpawnFruit(FruitData data, Vector3 position)
         {
-            var go = new GameObject($"Fruit_{data.displayName}");
-            go.transform.position = position;
+            GameObject go;
+            if (data.prefab != null)
+            {
+                go = Instantiate(data.prefab, position, Quaternion.identity);
+                go.name = $"Fruit_{data.displayName}";
+            }
+            else
+            {
+                go = new GameObject($"Fruit_{data.displayName}");
+                go.transform.position = position;
+                // 프리팹이 없는 경우를 대비한 최소 컴포넌트 추가
+                go.AddComponent<Rigidbody2D>();
+                go.AddComponent<CircleCollider2D>();
+                go.AddComponent<SpriteRenderer>();
+            }
 
-            var fruit = go.AddComponent<Fruit>();
-            go.AddComponent<Rigidbody2D>();
-            go.AddComponent<CircleCollider2D>();
-            go.AddComponent<SpriteRenderer>();
+            var fruit = go.GetComponent<Fruit>();
+            if (fruit == null)
+                fruit = go.AddComponent<Fruit>();
 
             fruit.Initialize(data);
             Register(fruit);

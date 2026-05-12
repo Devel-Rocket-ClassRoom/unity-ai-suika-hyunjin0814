@@ -32,6 +32,25 @@ namespace SuikaGame.Gameplay
         {
             data = fruitData;
 
+            // 컴포넌트 참조 재확인 (동적 생성 시 Awake 시점에 없을 수 있음)
+            if (rb == null)
+                rb = GetComponent<Rigidbody2D>();
+            if (col == null)
+                col = GetComponent<CircleCollider2D>();
+            if (sr == null)
+                sr = GetComponent<SpriteRenderer>();
+
+            // 중복된 CircleCollider2D 제거 (Radius 0.5 문제 해결)
+            var colliders = GetComponents<CircleCollider2D>();
+            if (colliders.Length > 1)
+            {
+                for (int i = 1; i < colliders.Length; i++)
+                {
+                    Destroy(colliders[i]);
+                }
+            }
+            col = colliders[0];
+
             // Rigidbody2D 설정
             rb.mass = data.mass;
             rb.linearDamping = 0.5f;
@@ -41,15 +60,18 @@ namespace SuikaGame.Gameplay
             rb.freezeRotation = false;
 
             // CircleCollider2D 설정
-            col.radius = data.radius;
+            // 시각적 반지름(visualRadius)이 있으면 해당 값으로 콜라이더를 설정하고,
+            // 전체 스케일을 조절하여 실제 물리 반지름(data.radius)을 맞춥니다.
+            float vRadius = data.visualRadius > 0 ? data.visualRadius : 0.5f;
+            col.radius = vRadius;
 
             // SpriteRenderer 설정
             if (data.sprite != null)
                 sr.sprite = data.sprite;
 
-            // 스케일을 반지름 기준으로 조정 (radius=1 기준 sprite 가정)
-            float diameter = data.radius * 2f;
-            transform.localScale = new Vector3(diameter, diameter, 1f);
+            // 스케일 계산: 물리 반지름 / 시각적 반지름
+            float scaleValue = data.radius / vRadius;
+            transform.localScale = new Vector3(scaleValue, scaleValue, 1f);
         }
 
         public bool IsResting() => rb.linearVelocity.magnitude < 0.1f;
